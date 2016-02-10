@@ -1,0 +1,27 @@
+<div class="jumbotron">
+  <h1>Homework 5
+</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Built with Yeoman
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div align="center"> 
+    <p>Search through the list to find exactly what you want!</p>
+    <input type="text" ng-model="something" class="form-group" placeholder="Search">
+</div>
+
+<br>
+
+<div class="container" ng-repeat="tutorial in tutorial.tutInfo | filter:something" style="text-align:center">
+  <div class="panel panel-default">
+    <h3 align="center">{{tutorial.title}}</h3>
+    <img src="{{tutorial.image}}" alt="{{tutorial.author}} image" style="width:120px;height:120px;" hspace="30">
+    <p>{{tutorial.author}}</p>
+    <a href="{{tutorial.url}}">{{tutorial.url}}</a>
+  </div>
+</div>
+
+
